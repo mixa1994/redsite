@@ -1,0 +1,22 @@
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+<a-scene embedded artoolkit="sourceType: webcam;">
+
+  <a-assets>
+    <a-asset-item id="obj1" src="models/elephant.obj"></a-asset-item>
+    <a-asset-item id="mtl1" src="models/elephant.mtl"></a-asset-item>
+  </a-assets>
+
+ <a-marker type="pattern" url="marker/letterA.patt" size="1"> 
+    <a-obj-model src="#obj1" mtl="#mtl1" position="0 0 0" rotation="0 0 0" scale="0.2 0.2 0.2">
+    </a-obj-model>
+  </a-marker>
+
+  <a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
